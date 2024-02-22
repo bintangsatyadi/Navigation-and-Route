@@ -22,12 +22,21 @@ class ItemPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('${itemArgs.name}',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),textAlign: TextAlign.center,),
-            Text('Item Name: ${itemArgs.name}'),
+            Image.asset(
+              itemArgs.imagePath,
+              width: 500,
+              height: 500,
+              fit: BoxFit.cover,
+            ),
+            Text('${itemArgs.name}',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),textAlign: TextAlign.center,),
+            SizedBox(height: 10,),
+            Text('Item Name: ${itemArgs.name}',style: TextStyle(fontSize: 16),),
             SizedBox(height: 8),
-            Text('Price: ${itemArgs.price}'),
+            Text('Price: Rp. ${itemArgs.price}',style: TextStyle(fontSize: 16),),
             SizedBox(height: 8),
-            Text('Description: ${itemArgs.description}'),
+            Text('Quantity : ${itemArgs.quantity}',style: TextStyle(fontSize: 16),),
+            SizedBox(height: 8,),
+            Text('Description: ${itemArgs.description}',style: TextStyle(fontSize: 16),),
             SizedBox(height: 15),
             ElevatedButton(
               onPressed: () {

@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
         imagePath: "assets/diamondmmilk.jpg"),
     Item(
         name: "Cimory Yogurt",
-        price: 1000,
+        price: 10000,
         quantity: 50,
         description: "Cimory Yogurt",
         imagePath: "assets/cimorryyogurt.jpg")
@@ -28,6 +28,8 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('List Barang'),
+        backgroundColor: Colors.blue[700],
+
       ),
       body: Container(
         margin: EdgeInsets.all(8),
@@ -37,7 +39,7 @@ class HomePage extends StatelessWidget {
           itemBuilder: (context, index) {
             final item = items[index];
             return Card(
-              color: index % 2 == 0 ? Colors.blue[100] : Colors.green[100],
+              color: index % 2 == 0 ? Colors.blueAccent[100] : Colors.greenAccent[100],
               child: InkWell(
                 onTap: () {
                   Navigator.pushNamed(context, '/item', arguments: item);
@@ -57,10 +59,11 @@ class HomePage extends StatelessWidget {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(item.name,style: TextStyle(fontWeight: FontWeight.bold),),
+                              Text(item.name,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                              SizedBox(height: 4,),
                               Text(
-                                item.price.toString(),
-                                textAlign: TextAlign.end,
+                               'Rp.' + item.price.toString(),
+                                textAlign: TextAlign.end,style: TextStyle(fontSize: 16),
                               ),
                             ],
                           ))
