@@ -20,7 +20,8 @@ class HomePage extends StatelessWidget {
         price: 10000,
         quantity: 50,
         description: "Cimory Yogurt",
-        imagePath: "assets/cimorryyogurt.jpg")
+        imagePath: "assets/cimorryyogurt.jpg"),
+    Item(name: 'Ichi Ocha', price: 3000, quantity: 100, description: 'Ichi Ocha dengan teh pilihan dipadukan dengan 2 bunga jasmine', imagePath:'assets/ichi.jpg')
   ];
 
   @override

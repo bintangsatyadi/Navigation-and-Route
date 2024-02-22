@@ -24,8 +24,8 @@ class ItemPage extends StatelessWidget {
           children: [
             Image.asset(
               itemArgs.imagePath,
-              width: 500,
-              height: 500,
+              width: 400,
+              height: 400,
               fit: BoxFit.cover,
             ),
             Text('${itemArgs.name}',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),textAlign: TextAlign.center,),
