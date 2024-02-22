@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../models/item.dart';
 
 class HomePage extends StatelessWidget {
+
   final List<Item> items = [
     Item(
         name: "Ultra Milk",
@@ -62,6 +63,20 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('List Barang'),
+        actions: [
+          IconButton(
+            onPressed: () {
+              // Fungsi yang akan dijalankan saat ikon pencarian di klik
+            },
+            icon: Icon(Icons.search_outlined),
+          ),
+          IconButton(
+            onPressed: () {
+              // Fungsi yang akan dijalankan saat ikon notifikasi di klik
+            },
+            icon: Icon(Icons.notifications_outlined),
+          ),
+        ],
         backgroundColor: Colors.blue[700],
       ),
       body: Container(
@@ -98,8 +113,13 @@ class HomePage extends StatelessWidget {
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 20),
                           ),
-                          SizedBox(height: 2,),
-                          Text(item.shordesc,style: TextStyle(fontSize: 16),),
+                          SizedBox(
+                            height: 2,
+                          ),
+                          Text(
+                            item.shordesc,
+                            style: TextStyle(fontSize: 16),
+                          ),
                           SizedBox(
                             height: 6,
                           ),
@@ -116,6 +136,18 @@ class HomePage extends StatelessWidget {
               ),
             );
           },
+        ),
+      ),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.blueAccent[300],
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            IconButton(onPressed: () {}, icon: Icon(Icons.home)),
+            IconButton(onPressed: () {}, icon: Icon(Icons.live_tv_outlined)),
+            IconButton(onPressed: () {}, icon: Icon(Icons.shopping_bag)),
+            IconButton(onPressed: () {}, icon: Icon(Icons.person)),
+          ],
         ),
       ),
     );
