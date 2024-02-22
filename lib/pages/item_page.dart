@@ -1,4 +1,4 @@
-import 'dart:ffi';
+
 
 import 'package:flutter/material.dart';
 import '../models/item.dart';
@@ -28,8 +28,9 @@ class ItemPage extends StatelessWidget {
               height: 400,
               fit: BoxFit.cover,
             ),
+            SizedBox(height: 20,),
             Text('${itemArgs.name}',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),textAlign: TextAlign.center,),
-            SizedBox(height: 10,),
+            SizedBox(height: 8,),
             Text('Item Name: ${itemArgs.name}',style: TextStyle(fontSize: 16),),
             SizedBox(height: 8),
             Text('Price: Rp. ${itemArgs.price}',style: TextStyle(fontSize: 16),),
