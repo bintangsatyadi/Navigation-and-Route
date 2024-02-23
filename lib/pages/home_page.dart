@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../models/item.dart';
 
 class HomePage extends StatelessWidget {
+HomePage({super.key});
 
   final List<Item> items = [
     Item(
@@ -57,6 +58,8 @@ class HomePage extends StatelessWidget {
             'Fruit Tea minuman tea dengan paduan beberapa buah-buahana yang membuat rasa jadi nikmat',
         imagePath: 'assets/fruittea.jpg')
   ];
+
+  
 
   @override
   Widget build(BuildContext context) {
