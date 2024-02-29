@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../models/item.dart';
 
 class HomePage extends StatelessWidget {
-HomePage({super.key});
+  HomePage({super.key});
 
   final List<Item> items = [
     Item(
@@ -56,10 +56,24 @@ HomePage({super.key});
         shordesc: 'Fruittea Sosro dengan aneka rasa',
         description:
             'Fruit Tea minuman tea dengan paduan beberapa buah-buahana yang membuat rasa jadi nikmat',
-        imagePath: 'assets/fruittea.jpg')
+        imagePath: 'assets/fruittea.jpg'),
+    Item(
+        name: 'Fruit Tea',
+        price: 6000,
+        quantity: 500,
+        shordesc: 'Fruittea Sosro dengan aneka rasa',
+        description:
+            'Fruit Tea minuman tea dengan paduan beberapa buah-buahana yang membuat rasa jadi nikmat',
+        imagePath: 'assets/fruittea.jpg'),
+    Item(
+        name: 'Fruit Tea',
+        price: 6000,
+        quantity: 500,
+        shordesc: 'Fruittea Sosro dengan aneka rasa',
+        description:
+            'Fruit Tea minuman tea dengan paduan beberapa buah-buahana yang membuat rasa jadi nikmat',
+        imagePath: 'assets/fruittea.jpg'),
   ];
-
-  
 
   @override
   Widget build(BuildContext context) {

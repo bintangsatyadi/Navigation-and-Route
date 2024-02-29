@@ -17,7 +17,8 @@ class ItemPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Item Detail'),
       ),
-      body: Container(
+      body: SingleChildScrollView(
+        child: Container(
         padding: EdgeInsets.all(8),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -33,7 +34,7 @@ class ItemPage extends StatelessWidget {
             SizedBox(height: 8,),
             Text('Item Name: ${itemArgs.name}',style: TextStyle(fontSize: 16),),
             SizedBox(height: 8),
-            Text('Price: Rp. ${itemArgs.price}',style: TextStyle(fontSize: 16),),
+            Text('Price: Rp. ${itemArgs.price.toString()}',style: TextStyle(fontSize: 16),),
             SizedBox(height: 8),
             Text('Quantity : ${itemArgs.quantity}',style: TextStyle(fontSize: 16),),
             SizedBox(height: 8,),
@@ -49,6 +50,7 @@ class ItemPage extends StatelessWidget {
           ],
         ),
       ),
+      )
     );
   }
 }
